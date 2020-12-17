@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ikulkix.github.io</id>
     <title>iKulkix</title>
-    <updated>2020-12-17T11:01:15.168Z</updated>
+    <updated>2020-12-17T12:07:14.920Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ikulkix.github.io"/>
     <link rel="self" href="https://ikulkix.github.io/atom.xml"/>
@@ -11,20 +11,70 @@
     <icon>https://ikulkix.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, iKulkix</rights>
     <entry>
+        <title type="html"><![CDATA[Blog]]></title>
+        <id>https://ikulkix.github.io/post/blog/</id>
+        <link href="https://ikulkix.github.io/post/blog/">
+        </link>
+        <updated>2020-10-10T10:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p><strong>Github&amp;Gridea&amp;Vercel</strong></p>
+]]></summary>
+        <content type="html"><![CDATA[<p><strong>Github&amp;Gridea&amp;Vercel</strong></p>
+<!-- more -->
+<h1 id="0折腾">0.折腾</h1>
+<ul>
+<li><strong><a href="https://hexo.io/zh-cn/">Hexo</a></strong> ：快速、简洁且高效的博客框架；</li>
+<li><strong><a href="https://gohugo.io/">Hugo</a></strong>：全球最快的网站建设框架；</li>
+<li><strong><a href="https://gridea.dev/">Gridea</a></strong> ：一个静态博客写作客户端。</li>
+</ul>
+<p><strong>一直在这三个框架之间不停的切换，换来换去，却发现折腾的时间远远的超过了写Blog的时间。在历经 <a href="https://hexo.io/zh-cn/">Hexo</a> 和 <a href="https://gohugo.io/">Hugo</a> 的磨难之后，还是切换回了<a href="https://gridea.dev/">Gridea </a>  。</strong></p>
+<h1 id="1github">1.Github</h1>
+<h2 id="11github-page">1.1.GitHub Page</h2>
+<p>新建 <a href="https://github.com/">GitHub</a> 账号后新建一个公开仓库，名为ikulkix.github.io。</p>
+<h2 id="12token">1.2.Token</h2>
+<p>点击<a href="https://github.com/settings/tokens/new">这里</a>创建一个 Token，勾选上 repo 的相关权限即可。生成之后记得把 Token 复制到你的本地，因为一旦关闭网页将不能再看到它。</p>
+<h1 id="2gridea">2.Gridea</h1>
+<h2 id="21gridea">2.1.Gridea</h2>
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="http://fehey.com/">示例网站</a></p>
+<h2 id="22评论系统">2.2.评论系统</h2>
+<p><a href="https://github.com/gitalk/gitalk">Gitalk</a><br>
+<a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<h2 id="23配置">2.3.配置</h2>
+<p>根据官方指南<a href="https://gridea.dev/gridea-start/">快速上手</a>进行配置，这里有个问题，Github主分支现在为 <code>main</code> 个人博客建议使用 <code>main</code> 做远程分支。</p>
+<p><em>Gridea同步后的Repository</em><br>
+<img src="https://cdn.jsdelivr.net/gh/ikulkix/oss@main/uPic/HfkWnd.png" alt="avatar" loading="lazy"></p>
+<h1 id="3vercel">3.Vercel</h1>
+<p><em>vercel在台湾，GitHub pages在美国旧金山，Gridea 部署到 GitHub pages 并启用 vercel 加速&amp;域名</em></p>
+<h2 id="31登陆">3.1.登陆</h2>
+<p>直接使用你的Github账号关联登陆。</p>
+<h2 id="32connected-git-repository">3.2.Connected Git Repository</h2>
+<p>点击<a href="https://vercel.com/import/git">这里</a>导入Repository。</p>
+<h2 id="33域名">3.3.域名</h2>
+<p>仓库导入后，便可在项目设置中绑定域名或者使用Vercel提供的二级域名，这里绑定为<code>www.ikulkix.com</code>。<br>
+<img src="https://cdn.jsdelivr.net/gh/ikulkix/oss@main/uPic/sShig5.png" alt="avatar" loading="lazy"></p>
+<h2 id="34结束">3.4.结束</h2>
+<p>按照上面做完以后，就能得到一个地址为<code>https://www.ikulkix.com</code>的博客。<br>
+<img src="https://cdn.jsdelivr.net/gh/ikulkix/oss@main/uPic/CspxOR.png" alt="avatar" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Gridea]]></title>
         <id>https://ikulkix.github.io/post/gridea/</id>
         <link href="https://ikulkix.github.io/post/gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <summary type="html"><![CDATA[<p>✍️<strong>A static blog writing client (一个静态博客写作客户端)。</strong></p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <content type="html"><![CDATA[<p>✍️<strong>A static blog writing client (一个静态博客写作客户端)。</strong></p>
 <!-- more -->
+<h2 id="gridea">Gridea</h2>
 <p><a href="https://github.com/getgridea/gridea">Github</a><br>
 <a href="https://gridea.dev/">Gridea 主页</a><br>
 <a href="http://fehey.com/">示例网站</a></p>
+<h2 id="评论系统">评论系统 💬</h2>
+<p><a href="https://github.com/gitalk/gitalk">Gitalk</a><br>
+<a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
 <h2 id="特性">特性👇</h2>
 <p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
 <p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
@@ -32,14 +82,6 @@
 <p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
 <p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
 <p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
 ]]></content>
     </entry>
 </feed>

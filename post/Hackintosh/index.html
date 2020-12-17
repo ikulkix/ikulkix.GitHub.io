@@ -1,0 +1,281 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hackintosh | 以梦为马</title>
+<link rel="shortcut icon" href="https://ikulkix.github.io/favicon.ico?v=1608211781175">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://ikulkix.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Hackintosh | 以梦为马 - Atom Feed" href="https://ikulkix.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="Hackintosh-OpenCore 0.6.3-Big Sur 11.0.1
+1.安装U盘制作
+因为主力使用Macbookpro所以基于MacOS下进行操作：
+
+Big Sur 11.0.1环境使用 AppStore下载 Big Sur..." />
+    <meta name="keywords" content="Hosts,MacOS,Adobe,OpenCrae" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://ikulkix.github.io">
+  <img class="avatar" src="https://ikulkix.github.io/images/avatar.png?v=1608211781175" alt="">
+  </a>
+  <h1 class="site-title">
+    以梦为马
+  </h1>
+  <p class="site-description">
+    和所有以梦为马的诗人一样，最后我被黄昏的众神抬入不朽的太阳
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Hackintosh
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-11-05
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://ikulkix.github.io/tag/XmFqzIshM_/" class="post-tag">
+                  # Hosts
+                </a>
+              
+                <a href="https://ikulkix.github.io/tag/TJtFp8bOcJ/" class="post-tag">
+                  # MacOS
+                </a>
+              
+                <a href="https://ikulkix.github.io/tag/IDG3yT4ShT/" class="post-tag">
+                  # Adobe
+                </a>
+              
+                <a href="https://ikulkix.github.io/tag/MAb2AfihJ3/" class="post-tag">
+                  # OpenCrae
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://cdn.jsdelivr.net/gh/ikulkix/oss@main/uPic/Workstations.jpg" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p><strong>Hackintosh-OpenCore 0.6.3-Big Sur 11.0.1</strong></p>
+<h1 id="1安装u盘制作">1.安装U盘制作</h1>
+<p><strong>因为主力使用Macbookpro所以基于MacOS下进行操作：</strong></p>
+<ol>
+<li>Big Sur 11.0.1环境使用 AppStore下载 Big Sur正式版镜像;</li>
+<li>使用磁盘工具格式化U盘,格式：Mac OS扩展(日志式),方案：GUID 分区图 (自带EFI分区);</li>
+<li>使用语句制作Big Sur启动盘（MyVolume为U盘名称）。</li>
+</ol>
+<pre><code>sudo /Volumes/Install\ macOS\ Big\ Sur/Install\ macOS\ Big\ Sur.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
+</code></pre>
+<p><strong>等代码跑完就有了一个Big Sur 11.0.1 的安装U盘。</strong></p>
+<h1 id="2efi">2.EFI</h1>
+<p><strong>使用EFI及主板bios设置参考  <a href="https://github.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI">GeQ1an</a> Hackintosh正常引导</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6666749"><label class="task-list-item-label" for="task-item-6666749"> 声卡（板载）/ 网卡（板载）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-643432"><label class="task-list-item-label" for="task-item-643432"> 显卡（核显 + 独显）/ 硬解 4K（HEVC + H.264）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2323339"><label class="task-list-item-label" for="task-item-2323339"> WiFi（PCI-E 设备） / 蓝牙（PEI-E 载 USB 设备）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3298131"><label class="task-list-item-label" for="task-item-3298131"> 隔空投送 / 接力 / 随航</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7820401"><label class="task-list-item-label" for="task-item-7820401"> FaceTime / iMessage</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8937250"><label class="task-list-item-label" for="task-item-8937250"> Apple Music / Apple TV Plus</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9520100"><label class="task-list-item-label" for="task-item-9520100"> 睿频 / HWP 变频 / 原生电源管理</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7571874"><label class="task-list-item-label" for="task-item-7571874"> 睡眠 / 键盘、鼠标唤醒</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-438777"><label class="task-list-item-label" for="task-item-438777"> 其他白果功能（99%）</label></li>
+</ul>
+<h1 id="3硬件">3.硬件</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">硬件</th>
+<th style="text-align:left">型号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">主板</td>
+<td style="text-align:left">微星 B360M 迫击炮</td>
+</tr>
+<tr>
+<td style="text-align:right">CPU</td>
+<td style="text-align:left">英特尔酷睿 i5-8500</td>
+</tr>
+<tr>
+<td style="text-align:right">GPU</td>
+<td style="text-align:left">公版 RX 380 2GB</td>
+</tr>
+<tr>
+<td style="text-align:right">SSD</td>
+<td style="text-align:left">三星 PM961 256GB</td>
+</tr>
+<tr>
+<td style="text-align:right">RAM</td>
+<td style="text-align:left">海盗船 8GB DDR4 2400MHz x 4</td>
+</tr>
+</tbody>
+</table>
+<h1 id="4环境">4.环境</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">环境</th>
+<th style="text-align:left">版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">OpenCore</td>
+<td style="text-align:left">0.6.3</td>
+</tr>
+<tr>
+<td style="text-align:right">MacOS</td>
+<td style="text-align:left">Big Sur 11.0.1</td>
+</tr>
+<tr>
+<td style="text-align:right">BIOS 版本</td>
+<td style="text-align:left"><a href="https://cn.msi.com/Motherboard/support/B360M-MORTAR">7B23v1B</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="5替换">5.替换</h1>
+<ol>
+<li>产生未使用的新的三码进行替换；</li>
+<li>根据 GeQ1an 的提示更改代码；</li>
+<li>替换 GeQ1an 提供的 EFI 替换现有U盘的EFI分区。</li>
+</ol>
+<p><strong>至此就有了一个带OpenCore 0.6.3的Big Sur 11.0.1 的安装U盘。</strong></p>
+<h1 id="6hackintosh安装">6.Hackintosh安装</h1>
+<p><strong>MacOS 引导安装完成后挂载系统EFI磁盘，将U盘内EFI文件夹替换到系统EFI磁盘内，Hackintosh就可以自OpenCore引导启动。</strong></p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#1%E5%AE%89%E8%A3%85u%E7%9B%98%E5%88%B6%E4%BD%9C">1.安装U盘制作</a></li>
+<li><a href="#2efi">2.EFI</a></li>
+<li><a href="#3%E7%A1%AC%E4%BB%B6">3.硬件</a></li>
+<li><a href="#4%E7%8E%AF%E5%A2%83">4.环境</a></li>
+<li><a href="#5%E6%9B%BF%E6%8D%A2">5.替换</a></li>
+<li><a href="#6hackintosh%E5%AE%89%E8%A3%85">6.Hackintosh安装</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://ikulkix.github.io/post/blog/">
+              <h3 class="post-title">
+                Blog：Github&amp;Gridea&amp;Vercel
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://ikulkix.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
